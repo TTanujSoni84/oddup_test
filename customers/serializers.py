@@ -2,6 +2,9 @@ from rest_framework.serializers import ModelSerializer
 from .models import Customer, Transaction
 
 class CustomerSerializer(ModelSerializer):
+    """
+    Serializer to work with customer's CRUD operations
+    """
 
     class Meta:
         model = Customer
@@ -9,6 +12,9 @@ class CustomerSerializer(ModelSerializer):
 
 
 class TransactionSerializer(ModelSerializer):
+    """
+    Serializer to work with transaction's CRUD operations
+    """
 
     class Meta:
         model = Transaction
@@ -16,6 +22,9 @@ class TransactionSerializer(ModelSerializer):
 
 
 class CustomerBalanceSerializer(ModelSerializer):
+    """
+    Serializer to exclusively display a customer's balance
+    """
 
     class Meta:
         model = Customer

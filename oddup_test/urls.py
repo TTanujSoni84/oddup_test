@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from rest_framework import routers
-from customers.views import CustomerViewSet, CustomerBalanceView
+from customers.views import CustomerViewSet, CustomerBalanceView, TransactionCreateView
 
 
 customer_router = routers.SimpleRouter()
@@ -27,5 +27,6 @@ customer_router.register(r'customers', CustomerViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(customer_router.urls)),
-    path('api/customers/<int:id>/account_balance/', CustomerBalanceView.as_view())
+    path('api/customers/<int:id>/account_balance/', CustomerBalanceView.as_view()),
+    path('api/transactions/create/', TransactionCreateView.as_view())
 ]
