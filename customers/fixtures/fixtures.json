@@ -1,0 +1,45 @@
+[
+    {
+        "model": "customers.customer",
+        "pk": 1,
+        "fields": {
+            "first_name": "Glenn",
+            "last_name": "Hysen",
+            "email": "glenn@gbg.se",
+            "account_balance": 500,
+            "purchases": 1
+        }
+    },
+    {
+        "model": "customers.customer",
+        "pk": 2,
+        "fields": {
+            "first_name": "James",
+            "last_name": "Cameron",
+            "email": "james@cameronion.com",
+            "account_balance": 1000,
+            "purchases": 0
+        }
+    },
+    {
+        "model": "customers.customer",
+        "pk": 3,
+        "fields": {
+            "first_name": "Jen",
+            "last_name": "Barber",
+            "email": "jen@reynholmindustries.com",
+            "account_balance": 1000,
+            "purchases": 0
+        }
+    },
+    {
+        "model": "customers.transaction",
+        "pk": 1,
+        "fields": {
+            "customer": 1,
+            "price": 500,
+            "item": "ticket",
+            "timestamp": "2020-09-18T08:54:47+00:00"
+        }
+    }
+]
