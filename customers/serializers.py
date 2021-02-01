@@ -1,6 +1,7 @@
 from rest_framework.serializers import ModelSerializer
 from .models import Customer, Transaction
 
+
 class CustomerSerializer(ModelSerializer):
     """
     Serializer to work with customer's CRUD operations
